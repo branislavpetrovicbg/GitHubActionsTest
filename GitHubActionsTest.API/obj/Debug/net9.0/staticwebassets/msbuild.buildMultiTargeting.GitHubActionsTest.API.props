@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GitHubActionsTest.API.props" />
+</Project>

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "krxyPZu4ps7QxksuUhGsotOn80sLjNPHZf3gIJfKiSI=",
+  "Source": "GitHubActionsTest.API",
+  "BasePath": "_content/GitHubActionsTest.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
