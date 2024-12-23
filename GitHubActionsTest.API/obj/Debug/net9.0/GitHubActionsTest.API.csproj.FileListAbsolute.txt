@@ -25,10 +25,10 @@ C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\ne
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.GitHubActionsTest.API.props
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.GitHubActionsTest.API.props
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\GitHubAc.F14F76E2.Up2Date
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\GitHubActionsTest.API.dll
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\refint\GitHubActionsTest.API.dll
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\GitHubActionsTest.API.pdb
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\GitHubActionsTest.API.genruntimeconfig.cache
 C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\ref\GitHubActionsTest.API.dll
+C:\Users\Branislav\Projects\GitHubActionsTest\GitHubActionsTest.API\obj\Debug\net9.0\GitHubActionsTest.API.sourcelink.json
