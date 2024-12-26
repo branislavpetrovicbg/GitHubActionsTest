@@ -1,0 +1,26 @@
+# Stage 1: Build Stage
+FROM mcr.microsoft.com/dotnet/sdk:9.0 as build
+WORKDIR /source
+
+# Copy csproj and restore as distinct layers
+COPY ./GitHubActionsTest.API/GitHubActionsTest.API.csproj .
+
+RUN dotnet restore
+
+# Copy everything else and build
+COPY ./GitHubActionsTest.API .
+
+RUN dotnet build -c Release --no-restore
+
+RUN dotnet publish -c Release -r linux-x64 -o ./app/publish --no-build
+
+# Stage 2: Runtime Stage
+FROM mcr.microsoft.com/dotnet/aspnet:9.0
+
+WORKDIR /app
+
+COPY --from=build /app/publish .
+
+EXPOSE 5000
+
+ENTRYPOINT ["dotnet", "GitHubActionsTest.API"]
