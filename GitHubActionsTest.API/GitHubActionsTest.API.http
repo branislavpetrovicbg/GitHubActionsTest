@@ -1,6 +1,9 @@
-@GitHubActionsTest.API_HostAddress = http://localhost:5090
+@GitHubActionsTest.API_HostAddress = http://localhost:5000
 
 GET {{GitHubActionsTest.API_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET {{GitHubActionsTest.API_HostAddress}}/api/airquality/
+Accept: application/json
