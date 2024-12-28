@@ -26,6 +26,8 @@ namespace GitHubActionsTest.API.Controllers
             var airQualityDto = new AirQualityDto();
             var airQuality = await airQualityHttpClient.GetAirQualityAsync(airQualityDto);
 
+            logger.LogInformation(new EventId(2507986), "Air quality: {airQuality}", airQuality);
+
             return Ok(airQuality);
         }
     }
