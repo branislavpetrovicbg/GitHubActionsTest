@@ -1,39 +1,40 @@
 ﻿using GitHubActionsTest.API.Configuration;
 using GitHubActionsTest.API.Controllers;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using WireMock.RequestBuilders;
 using WireMock.ResponseBuilders;
 using WireMock.Server;
-using WireMock.Settings;
 
 namespace GitHubActionsTest.FunctionalTests
 {
-    public class AirQualityTestsWithWireMock : IDisposable
+    public class AirQualityTestsWithWireMock : WebApplicationFactory<AirQualityController>
     {
-        private readonly CustomWebApplicationFactory<AirQualityController> factory;
         private readonly HttpClient client;
         private readonly WireMockServer mockServer;
 
         public AirQualityTestsWithWireMock()
         {
             mockServer = WireMockServer.Start();
+            client = CreateClient();
+        }
 
-            factory = new CustomWebApplicationFactory<AirQualityController>(services =>
+        protected override void ConfigureWebHost(IWebHostBuilder builder)
+        {
+            builder.ConfigureServices(services =>
             {
-                // Configure your app to use mock server URL instead of real API
                 services.Configure<AppSettings>(options =>
                 {
                     options.ExternalApiBaseUrl = mockServer.Urls[0];
                 });
             });
-            client = factory.CreateClient();
         }
 
-        public void Dispose()
+        protected override void Dispose(bool disposing)
         {
+            base.Dispose(disposing);
             mockServer.Stop();
-            factory.Dispose();
-            client.Dispose();
         }
 
         [Fact]
