@@ -1,0 +1,6 @@
+services:
+  githubactionstest.api:
+    image: ${DOCKER_REGISTRY-}githubactionstestapi
+    build:
+      context: ./GitHubActionsTest.API
+      dockerfile: Dockerfile
